@@ -13,8 +13,7 @@ import smtplib
 import time
 import requests
 import shutil
-from twilio.rest import Client
-from clint.textui import progress
+import contextlib
 from ecapture import ecapture as ec
 from urllib.request import urlopen
 random.seed(random.randint(1, 9000))
@@ -207,7 +206,7 @@ if __name__ == '__main__':
             speak("I am your virtual assistant created by AverseABFun")
  
         elif 'reason for you' in query:
-            speak("I was created as a Minor project by Mister AverseABFun ")
+            speak("I was created as a Minor project by AverseABFun ")
 
         elif 'news' or 'the news' in query:
              
@@ -268,20 +267,17 @@ if __name__ == '__main__':
             file.close()
  
         elif "update assistant" in query:
-            speak("After downloading file please replace this file with the downloaded one")
             url = 'https://github.com/AverseABFun/voice-assistant'
             r = requests.get(url, stream = True)
-             
-            with open("main.py", "wb") as Pypdf:
-                 
-                total_length = int(r.headers.get('content-length'))
-                 
-                for ch in progress.bar(r.iter_content(chunk_size = 2391975),
-                                       expected_size =(total_length / 1024) + 1):
-                    if ch:
-                      Pypdf.write(ch)
-                     
-        # NPPR9-FWDCX-D2C8J-H872K-2YT43
+            @contextlib.contextmanager
+            def post_results(total_f, resu):
+                with open(total_f, 'w') as f:
+                    f.write(str(r))
+                    f.write('\n'.join(map(str, resu)))
+
+            with post_results('main.py', r) as f:
+                print(f)
+            
         elif "assistant name" in query:
              
             wishMe()

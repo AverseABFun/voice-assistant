@@ -392,19 +392,6 @@ test = ["pytest", "coverage", "tox"]
 
 [[package]]
 category = "main"
-description = "JSON Web Token implementation in Python"
-name = "pyjwt"
-optional = false
-python-versions = "*"
-version = "1.7.1"
-
-[package.extras]
-crypto = ["cryptography (>=1.4)"]
-flake8 = ["flake8", "flake8-import-order", "pep8-naming"]
-test = ["pytest (>=4.0.1,<5.0.0)", "pytest-cov (>=2.6.0,<3.0.0)", "pytest-runner (>=4.2,<5.0.0)"]
-
-[[package]]
-category = "main"
 description = "Python<->ObjC Interoperability Module"
 marker = "platform_system == \"Darwin\""
 name = "pyobjc"
@@ -2503,23 +2490,6 @@ dev = ["py-make (>=0.1.0)", "twine", "argopt", "pydoc-markdown", "wheel"]
 
 [[package]]
 category = "main"
-description = "Twilio API client and TwiML generator"
-name = "twilio"
-optional = false
-python-versions = "*"
-version = "6.50.1"
-
-[package.dependencies]
-PyJWT = ">=1.4.2"
-pytz = "*"
-six = "*"
-
-[package.dependencies.requests]
-python = ">=3.0"
-version = ">=2.0.0"
-
-[[package]]
-category = "main"
 description = "Backported and Experimental Type Hints for Python 3.5+"
 name = "typing-extensions"
 optional = false
@@ -2584,7 +2554,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.12.0"
 
 [metadata]
-content-hash = "890dcc527a3fa3e58303bcaf106c8a81c9473e136f060d850c8c816901f2620b"
+content-hash = "95fbfb7a37218f63cb0663e4bba266eca96f8e4e41272cdc2a84b29c6b0e34f1"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -2883,10 +2853,6 @@ pyasn1-modules = [
 pyjokes = [
     {file = "pyjokes-0.6.0-py2.py3-none-any.whl", hash = "sha256:70b6125186dee5845038505cd16b5e09250da46c730e36b44ffd870e3c81aaaa"},
     {file = "pyjokes-0.6.0.tar.gz", hash = "sha256:08860eedb78cbfa4618243c8db088f21c39823ece1fdaf0133e52d9c56e981a5"},
-]
-pyjwt = [
-    {file = "PyJWT-1.7.1-py2.py3-none-any.whl", hash = "sha256:5c6eca3c2940464d106b99ba83b00c6add741c9becaec087fb7ccdefea71350e"},
-    {file = "PyJWT-1.7.1.tar.gz", hash = "sha256:8d59a976fb773f3e6a39c85636357c4f0e242707394cadadd9814f5cbaa20e96"},
 ]
 pyobjc = [
     {file = "pyobjc-7.0.1-py3-none-any.whl", hash = "sha256:c5d3057609f5c852b2817de1e55f1811f976909fc6ff0409d759f829d703c6cf"},
@@ -3716,9 +3682,6 @@ toolz = [
 tqdm = [
     {file = "tqdm-4.54.1-py2.py3-none-any.whl", hash = "sha256:d4f413aecb61c9779888c64ddf0c62910ad56dcbe857d8922bb505d4dbff0df1"},
     {file = "tqdm-4.54.1.tar.gz", hash = "sha256:38b658a3e4ecf9b4f6f8ff75ca16221ae3378b2e175d846b6b33ea3a20852cf5"},
-]
-twilio = [
-    {file = "twilio-6.50.1.tar.gz", hash = "sha256:dd8371c9b4ea422d6de7526b63b587da82e8488f2b3f6b1258d2cad6e4006a65"},
 ]
 typing-extensions = [
     {file = "typing_extensions-3.7.4.3-py2-none-any.whl", hash = "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"},
