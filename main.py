@@ -269,7 +269,7 @@ if __name__ == '__main__':
  
         elif "update assistant" in query:
             speak("After downloading file please replace this file with the downloaded one")
-            url = '# url after uploading file'
+            url = 'https://github.com/AverseABFun/voice-assistant'
             r = requests.get(url, stream = True)
              
             with open("main.py", "wb") as Pypdf:
