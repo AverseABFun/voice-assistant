@@ -329,7 +329,7 @@ if __name__ == '__main__':
         elif "how are you" in query:
             speak("I'm fine, glad you asked")
  
-        elif "i love you" in query:
+        elif "i love you" or "i like you" in query:
             speak("Thanks!")
  
         elif "what is" in query or "who is" in query:
