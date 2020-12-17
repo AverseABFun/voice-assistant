@@ -282,7 +282,7 @@ if __name__ == '__main__':
                       Pypdf.write(ch)
                      
         # NPPR9-FWDCX-D2C8J-H872K-2YT43
-        elif "jarvis" in query:
+        elif "assistant name" in query:
              
             wishMe()
             speak(aname)
@@ -292,12 +292,12 @@ if __name__ == '__main__':
              
             # Google Open weather website
             # to get API of Open weather 
-            api_key = "Api key"
-            base_url = "http://api.openweathermap.org / data / 2.5 / weather"
+            api_key = "8811f18d10247bb1d6881f1935838c1a"
+            base_url = "http://api.openweathermap.org/ data/2.5/weather"
             speak(" City name ")
             print("City name : ")
             city_name = takeCommand()
-            complete_url = base_url + "appid =" + api_key + "&q =" + city_name
+            complete_url = base_url + "?appid=" + api_key + "&q=" + city_name
             response = requests.get(complete_url) 
             x = response.json() 
              
@@ -312,22 +312,7 @@ if __name__ == '__main__':
              
             else: 
                 speak(" City Not Found ")
-             
-        elif "send message " in query:
-                # You need to create an account on Twilio to use this service
-                account_sid = 'Account Sid key'
-                auth_token = 'Auth token'
-                client = Client(account_sid, auth_token)
- 
-                message = client.messages \
-                                .create(
-                                    body = takeCommand(),
-                                    from_='Sender No',
-                                    to ='Receiver No'
-                                )
- 
-                print(message.sid)
- 
+
         elif "wikipedia" in query:
             webbrowser.open("wikipedia.com")
  
@@ -352,7 +337,7 @@ if __name__ == '__main__':
             query.replace("who is", "")
             # Use the same API key 
             # that we have generated earlier
-            client = wolframalpha.Client("API_ID")
+            client = wolframalpha.Client("22L8AJ-RAYXG5H8EG")
             res = client.query(query)
              
             try:
