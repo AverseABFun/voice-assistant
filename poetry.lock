@@ -1,13 +1,5 @@
 [[package]]
 category = "main"
-description = "Command Arguments for Humans."
-name = "args"
-optional = false
-python-versions = "*"
-version = "0.1.0"
-
-[[package]]
-category = "main"
 description = "Screen-scraping library"
 name = "beautifulsoup4"
 optional = false
@@ -46,17 +38,6 @@ name = "chardet"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 version = "4.0.0"
-
-[[package]]
-category = "main"
-description = "Python Command Line Interface Tools"
-name = "clint"
-optional = false
-python-versions = "*"
-version = "0.5.1"
-
-[package.dependencies]
-args = "*"
 
 [[package]]
 category = "main"
@@ -2554,13 +2535,10 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.12.0"
 
 [metadata]
-content-hash = "95fbfb7a37218f63cb0663e4bba266eca96f8e4e41272cdc2a84b29c6b0e34f1"
+content-hash = "89b08b4ef3e66729e9afb0a8d261824e8ad69567b9d011a5fb9e90c2262f7b23"
 python-versions = "^3.8"
 
 [metadata.files]
-args = [
-    {file = "args-0.1.0.tar.gz", hash = "sha256:a785b8d837625e9b61c39108532d95b85274acd679693b71ebb5156848fcf814"},
-]
 beautifulsoup4 = [
     {file = "beautifulsoup4-4.9.3-py2-none-any.whl", hash = "sha256:4c98143716ef1cb40bf7f39a8e3eec8f8b009509e74904ba3a7b315431577e35"},
     {file = "beautifulsoup4-4.9.3-py3-none-any.whl", hash = "sha256:fff47e031e34ec82bf17e00da8f592fe7de69aeea38be00523c04623c04fb666"},
@@ -2577,9 +2555,6 @@ certifi = [
 chardet = [
     {file = "chardet-4.0.0-py2.py3-none-any.whl", hash = "sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"},
     {file = "chardet-4.0.0.tar.gz", hash = "sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"},
-]
-clint = [
-    {file = "clint-0.5.1.tar.gz", hash = "sha256:05224c32b1075563d0b16d0015faaf9da43aa214e4a2140e51f08789e7a4c5aa"},
 ]
 cloudpickle = [
     {file = "cloudpickle-1.6.0-py3-none-any.whl", hash = "sha256:3a32d0eb0bc6f4d0c57fbc4f3e3780f7a81e6fee0fa935072884d58ae8e1cc7c"},

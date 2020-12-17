@@ -72,7 +72,7 @@ def takeCommand():
     try:
         print("Recognizing...")    
         query = r.recognize_google(audio, language ='en-in')
-        print(f"User said: {query}\n")
+        print(f"User said: {query}")
   
     except Exception as e:
         print(e)    
@@ -90,7 +90,7 @@ def sendEmail(to, content):
     speak("What is your email password")
     pwd = takeCommand()
     server.login(iid, pwd)
-    server.sendmail(id, to, content)
+    server.sendmail(iid, to, content)
     server.close()
 
 if __name__ == '__main__':
@@ -112,11 +112,11 @@ if __name__ == '__main__':
             speak(results)
  
         elif 'open youtube' in query:
-            speak("Here you go\n")
+            speak("Here you go")
             webbrowser.open("youtube.com")
  
         elif 'open google' in query:
-            speak("Here you go\n")
+            speak("Here you go")
             webbrowser.open("google.com")
  
         elif 'open stackoverflow' in query:
